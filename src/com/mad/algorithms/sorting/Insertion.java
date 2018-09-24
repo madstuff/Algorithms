@@ -4,13 +4,16 @@ package com.mad.algorithms.sorting;
  * Created by Intellij Idea.
  * Created On : 9/20/18.
  *
- * @Author : madstuff
+ * @author : madstuff
  */
 public class Insertion {
 
+    /**
+     *
+     * @param a
+     */
     public static void sort(Comparable[] a) {
         int N = a.length;
-
         for (int i = 0; i < N; i++) {
 
             for (int j = i; j > 0; j--) {
@@ -22,10 +25,14 @@ public class Insertion {
         }
     }
 
+    /**
+     *
+     * @param a
+     * @param lo
+     * @param hi
+     */
     public static void sort(Comparable[] a, int lo, int hi) {
-
         for (int i = lo; i <= hi; i++) {
-
             for (int j = i; j > 0; j--) {
                 if (less(a[j], a[j-1]))
                     exchange(a, j, j - 1);
@@ -34,8 +41,6 @@ public class Insertion {
             }
         }
     }
-
-
 
     /**
      * Swap item in array a[] at index i with the one at index j.
